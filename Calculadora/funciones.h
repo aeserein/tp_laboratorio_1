@@ -80,4 +80,6 @@ int continuar(void);
  */
 void imprimirTituloCalculadora(void);
 
+void calculadora(void);
+
 #endif // FUNCIONES_H_INCLUDED
