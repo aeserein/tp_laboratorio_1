@@ -38,3 +38,16 @@
 
 1536061685 c:\users\alumno\desktop\asdd\calculadora\funciones.h
 
+1536063601 source:c:\users\alumno\desktop\qwewqewqeqwe\calculadora\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<ctype.h>
+
+1536063601 source:c:\users\alumno\desktop\qwewqewqeqwe\calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1536064098 c:\users\alumno\desktop\qwewqewqeqwe\calculadora\funciones.h
+

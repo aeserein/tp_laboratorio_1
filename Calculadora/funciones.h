@@ -80,6 +80,12 @@ int continuar(void);
  */
 void imprimirTituloCalculadora(void);
 
+/** \brief  Calculadora
+ *
+ * \param   void
+ * \return  void
+ *
+ */
 void calculadora(void);
 
 #endif // FUNCIONES_H_INCLUDED
