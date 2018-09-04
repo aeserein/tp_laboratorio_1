@@ -98,12 +98,12 @@ int main() {
                     } else {
                         printf("DIVISI%cN\t-  %.2f / %.0f:\tError\n" , 224 , numeroUno, numeroDos);
                     }
-                    if (numeroUno-(int)numeroUno==0) {
+                    if (numeroUno-(int)numeroUno==0 && numeroUno>0) {
                         printf("FACTORIAL\t-  %.0f!:\t%li\n" , numeroUno, factorial1);
                     } else {
                         printf("FACTORIAL\t-  %.2f!: Error\n" , numeroUno);
                     }
-                    if (numeroDos-(int)numeroDos==0) {
+                    if (numeroDos-(int)numeroDos==0 && numeroDos>0) {
                         printf("FACTORIAL\t-  %.0f!:\t%li\n" , numeroDos, factorial2);
                     } else {
                         printf("FACTORIAL\t-  %.2f!: Error\n" , numeroDos);
