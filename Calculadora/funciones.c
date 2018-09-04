@@ -60,7 +60,7 @@ void pausaYClear(void) {
     system("cls");
 }
 
-int continuar(void) {
+unsigned short continuar(void) {
     char letra;
     do {
         printf("%cContinuar? S/N\t\t" , 168);
@@ -75,6 +75,14 @@ void imprimirTituloCalculadora(void){
     printf("*****************\n");
     printf("*  CALCULADORA  *\n");
     printf("*****************\n\n");
+}
+
+int tieneDecimalesEsteFloat(float numero) {
+    if (numero-(int)numero==0) {
+        return 0;
+    } else {
+        return 1;
+    }
 }
 
 void calculadora(void) {
@@ -103,7 +111,8 @@ void calculadora(void) {
         }
         printf("2. Ingresar segundo operando");
         if (bNumeroDos == 1) {
-            printf("\t> %.2f\n" , numeroDos);
+            printf("\t");
+            printf("> %.2f\n" , numeroDos);
         } else {
             printf("\n");
         }
@@ -124,6 +133,7 @@ void calculadora(void) {
                 bNumeroUno = 1;
                 if (bOperaciones) {
                     bOperaciones = 0;
+                    system("COLOR 07");
                 }
                 break;
             }
@@ -132,6 +142,7 @@ void calculadora(void) {
                 bNumeroDos = 1;
                 if (bOperaciones) {
                     bOperaciones = 0;
+                    system("COLOR 07");
                 }
                 break;
             }
@@ -147,11 +158,12 @@ void calculadora(void) {
                     factorial2 = factorialDe(numeroDos);
 
                     bOperaciones = 1;
+                    system("COLOR 17");
                     printf("\n%cResultados listos!\n" , 173);
                 } else {
                     printf("\nPrimero ingrese dos n%cmeros.\n" , 163);
                 }
-                    break;
+                break;
             }
             case 4 : {
                 if (bOperaciones) {
@@ -163,12 +175,12 @@ void calculadora(void) {
                     } else {
                         printf("DIVISI%cN\t-  %.2f / %.0f:\tError\n" , 224 , numeroUno, numeroDos);
                     }
-                    if (numeroUno-(int)numeroUno==0 && numeroUno>0) {
+                    if (!tieneDecimalesEsteFloat(numeroUno) && numeroUno>0) {
                         printf("FACTORIAL\t-  %.0f!:\t%li\n" , numeroUno, factorial1);
                     } else {
                         printf("FACTORIAL\t-  %.2f!: Error\n" , numeroUno);
                     }
-                    if (numeroDos-(int)numeroDos==0 && numeroDos>0) {
+                    if (!tieneDecimalesEsteFloat(numeroDos) && numeroDos>0) {
                         printf("FACTORIAL\t-  %.0f!:\t%li\n" , numeroDos, factorial2);
                     } else {
                         printf("FACTORIAL\t-  %.2f!: Error\n" , numeroDos);
@@ -188,8 +200,8 @@ void calculadora(void) {
         }
         if (opcion!=5) {
             pausaYClear();
+            system("COLOR 07");
         }
     } while (opcion!=5);
-
 
 }
