@@ -32,13 +32,13 @@ int main() {
         imprimirTituloCalculadora();
         printf("1. Ingresar primer operando");
         if (bNumeroUno == 1) {
-            printf("\t> %f\n" , numeroUno);
+            printf("\t> %.2f\n" , numeroUno);
         } else {
             printf("\n");
         }
         printf("2. Ingresar segundo operando");
         if (bNumeroDos == 1) {
-            printf("\t> %f\n" , numeroDos);
+            printf("\t> %.2f\n" , numeroDos);
         } else {
             printf("\n");
         }
@@ -98,8 +98,16 @@ int main() {
                     } else {
                         printf("DIVISI%cN\t-  %.2f / %.0f:\tError\n" , 224 , numeroUno, numeroDos);
                     }
-                    printf("FACTORIAL\t-  %.0f!:\t%li\n" , numeroUno, factorial1);
-                    printf("FACTORIAL\t-  %.0f!:\t%li\n" , numeroDos, factorial2);
+                    if (numeroUno-(int)numeroUno==0) {
+                        printf("FACTORIAL\t-  %.0f!:\t%li\n" , numeroUno, factorial1);
+                    } else {
+                        printf("FACTORIAL\t-  %.2f!: Error\n" , numeroUno);
+                    }
+                    if (numeroDos-(int)numeroDos==0) {
+                        printf("FACTORIAL\t-  %.0f!:\t%li\n" , numeroDos, factorial2);
+                    } else {
+                        printf("FACTORIAL\t-  %.2f!: Error\n" , numeroDos);
+                    }
                 } else {
                     printf("\nCalcule los valores antes de verlos en pantalla.\n");
                 }

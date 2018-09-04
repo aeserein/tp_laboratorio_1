@@ -18,6 +18,20 @@
 			<Collapse line="67" />
 		</Folding>
 	</File>
+	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4019" topLine="62" />
+		</Cursor>
+		<Folding>
+			<Collapse line="33" />
+			<Collapse line="39" />
+			<Collapse line="45" />
+			<Collapse line="56" />
+			<Collapse line="64" />
+			<Collapse line="115" />
+			<Collapse line="118" />
+		</Folding>
+	</File>
 	<File name="funciones.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1376" topLine="44" />
@@ -26,20 +40,6 @@
 			<Collapse line="12" />
 			<Collapse line="18" />
 			<Collapse line="24" />
-		</Folding>
-	</File>
-	<File name="main.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3039" topLine="71" />
-		</Cursor>
-		<Folding>
-			<Collapse line="33" />
-			<Collapse line="39" />
-			<Collapse line="45" />
-			<Collapse line="56" />
-			<Collapse line="64" />
-			<Collapse line="107" />
-			<Collapse line="110" />
 		</Folding>
 	</File>
 </CodeBlocks_layout_file>
