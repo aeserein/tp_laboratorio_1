@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1536098910 source:d:\alvaro\trabajos\programación\01 - programación 1\calculadora\funciones.c
+1536185710 source:d:\alvaro\trabajos\programación\01 - programación 1\calculadora\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -10,7 +10,7 @@
 	<stdlib.h>
 	"funciones.h"
 
-1536098109 d:\alvaro\trabajos\programación\01 - programación 1\calculadora\funciones.h
+1536187824 d:\alvaro\trabajos\programación\01 - programación 1\calculadora\funciones.h
 
 1536029548 source:d:\users\win7\desktop\asd\tp_laboratorio_1\calculadora\funciones.c
 	<stdio.h>
@@ -50,4 +50,17 @@
 	"funciones.h"
 
 1536064098 c:\users\alumno\desktop\qwewqewqeqwe\calculadora\funciones.h
+
+1536187824 source:d:\users\win7\desktop\golem\tp_laboratorio_1\calculadora\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<ctype.h>
+
+1536098091 source:d:\users\win7\desktop\golem\tp_laboratorio_1\calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1536187824 d:\users\win7\desktop\golem\tp_laboratorio_1\calculadora\funciones.h
 

@@ -73,20 +73,13 @@ void pausaYClear(void);
  */
 unsigned short continuar(void);
 
-/** \brief  Muestra el título de la calculadora
- *
- * \param   void
- * \return  void
- */
-void imprimirTituloCalculadora(void);
-
 /** \brief  ¿Tiene decimales este float?
  *
  * \param   float
  * \return  int     -   1 si tiene decimales
  *                  -   0 si no tiene decimales
  */
-int tieneDecimalesEsteFloat(float);
+unsigned short tieneDecimalesEsteFloat(float);
 
 /** \brief  Calculadora
  *

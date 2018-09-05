@@ -3,7 +3,6 @@
 #include <conio.h>
 #include <ctype.h>
 
-
 float sumarDos(float n1, float n2) {
     float resultado;
     resultado = n1+n2;
@@ -71,18 +70,8 @@ unsigned short continuar(void) {
     return (letra=='S');
 }
 
-void imprimirTituloCalculadora(void){
-    printf("*****************\n");
-    printf("*  CALCULADORA  *\n");
-    printf("*****************\n\n");
-}
-
-int tieneDecimalesEsteFloat(float numero) {
-    if (numero-(int)numero==0) {
-        return 0;
-    } else {
-        return 1;
-    }
+unsigned short tieneDecimalesEsteFloat(float numero) {
+    return (numero-(int)numero!=0);
 }
 
 void calculadora(void) {
@@ -102,34 +91,54 @@ void calculadora(void) {
 
 
     do {
-        imprimirTituloCalculadora();
-        printf("1. Ingresar primer operando");
+
+        printf("\n");
+        printf("  *****************************************\n");
+        printf("  ***                                   ***\n");
+        printf("  ***            CALCULADORA            ***\n");
+        printf("  ***                                   ***\n");
+        printf("  *****************************************\n");
+        printf("  *  \t\t\t\t\t  *\n");
+        printf("  *   1. Ingresar primer operando\t  *");
         if (bNumeroUno == 1) {
-            printf("\t> %.2f\n" , numeroUno);
+            printf("\t");
+            if (tieneDecimalesEsteFloat(numeroUno)){
+                printf("> %.2f\n" , numeroUno);
+            } else {
+                printf("> %.0f\n" , numeroUno);
+            }
         } else {
             printf("\n");
         }
-        printf("2. Ingresar segundo operando");
+        printf("  *   2. Ingresar segundo operando\t  *");
         if (bNumeroDos == 1) {
             printf("\t");
-            printf("> %.2f\n" , numeroDos);
+            if (tieneDecimalesEsteFloat(numeroDos)){
+                printf("> %.2f\n" , numeroDos);
+            } else {
+                printf("> %.0f\n" , numeroDos);
+            }
         } else {
             printf("\n");
         }
-        printf("3. Calcular operaciones");
+        printf("  *   3. Calcular operaciones\t\t  *");
         if (bOperaciones) {
-            printf("\t\tx\n");
+            printf("\tx\n");
         } else {
             printf("\n");
         }
-        printf("4. Mostrar resultados\n");
-        printf("-----------------\n");
-        printf("5. Salir\n\n");
-        opcion = ingresarFloat("Elija opcion:\t\t"); // No sé cómo pasar string con caracteres especiales
+        printf("  *   4. Mostrar resultados\t\t  *\n");
+        printf("  *  \t\t\t\t\t  *\n");
+        printf("  *****************************************\n");
+        printf("  *  \t\t\t\t\t  *\n");
+        printf("  *   5. Salir                            *\n");
+        printf("  *  \t\t\t\t\t  *\n");
+        printf("  *****************************************\n\n");
+        opcion = ingresarFloat("      Elija opcion:\t\t"); // No sé cómo pasar string con caracteres especiales
 
         switch (opcion) {
             case 1 :{
-                numeroUno = ingresarFloat("Ingrese numero uno:\t");
+                numeroUno = ingresarFloat("      Ingrese primer operando:\t");
                 bNumeroUno = 1;
                 if (bOperaciones) {
                     bOperaciones = 0;
@@ -138,7 +147,7 @@ void calculadora(void) {
                 break;
             }
             case 2 : {
-                numeroDos = ingresarFloat("Ingrese numero dos:\t");
+                numeroDos = ingresarFloat("      Ingrese segundo operando:\t");
                 bNumeroDos = 1;
                 if (bOperaciones) {
                     bOperaciones = 0;
@@ -159,34 +168,34 @@ void calculadora(void) {
 
                     bOperaciones = 1;
                     system("COLOR 17");
-                    printf("\n%cResultados listos!\n" , 173);
+                    printf("\n      %cResultados listos!\n" , 173);
                 } else {
-                    printf("\nPrimero ingrese dos n%cmeros.\n" , 163);
+                    printf("\n      Primero ingrese dos n%cmeros.\n" , 163);
                 }
                 break;
             }
             case 4 : {
                 if (bOperaciones) {
-                    printf("\nSUMA\t\t-  %.2f + %.2f:\t%.2f\n" , numeroUno, numeroDos, suma);
-                    printf("RESTA\t\t-  %.2f - %.2f:\t%.2f\n" , numeroUno, numeroDos, resta);
-                    printf("MULTIPLICACI%cN  -  %.2f * %.2f:\t%.2f\n" , 224 , numeroUno, numeroDos, multiplicacion);
+                    printf("\n      SUMA\t\t-  %.2f + %.2f:\t%.2f\n" , numeroUno, numeroDos, suma);
+                    printf("      RESTA\t\t-  %.2f - %.2f:\t%.2f\n" , numeroUno, numeroDos, resta);
+                    printf("      MULTIPLICACI%cN\t-  %.2f * %.2f:\t%.2f\n" , 224 , numeroUno, numeroDos, multiplicacion);
                     if (numeroDos!=0) {
-                        printf("DIVISI%cN\t-  %.2f / %.2f:\t%.2f\n" , 224 , numeroUno, numeroDos, division);
+                        printf("      DIVISI%cN\t\t-  %.2f / %.2f:\t%.2f\n" , 224 , numeroUno, numeroDos, division);
                     } else {
-                        printf("DIVISI%cN\t-  %.2f / %.0f:\tError\n" , 224 , numeroUno, numeroDos);
+                        printf("      DIVISI%cN\t\t-  %.2f / %.0f:\tError\n" , 224 , numeroUno, numeroDos);
                     }
                     if (!tieneDecimalesEsteFloat(numeroUno) && numeroUno>0) {
-                        printf("FACTORIAL\t-  %.0f!:\t%li\n" , numeroUno, factorial1);
+                        printf("      FACTORIAL\t\t-  %.0f!:\t%li\n" , numeroUno, factorial1);
                     } else {
-                        printf("FACTORIAL\t-  %.2f!: Error\n" , numeroUno);
+                        printf("      FACTORIAL\t\t-  %.2f!: Error\n" , numeroUno);
                     }
                     if (!tieneDecimalesEsteFloat(numeroDos) && numeroDos>0) {
-                        printf("FACTORIAL\t-  %.0f!:\t%li\n" , numeroDos, factorial2);
+                        printf("      FACTORIAL\t\t-  %.0f!:\t%li\n" , numeroDos, factorial2);
                     } else {
-                        printf("FACTORIAL\t-  %.2f!: Error\n" , numeroDos);
+                        printf("      FACTORIAL\t\t-  %.2f!: Error\n" , numeroDos);
                     }
                 } else {
-                    printf("\nCalcule los valores antes de verlos en pantalla.\n");
+                    printf("\n      Calcule los valores antes de verlos en pantalla.\n");
                 }
                 break;
             }
@@ -194,7 +203,7 @@ void calculadora(void) {
                 break;
             }
             default : {
-                printf("\nOpci%cn inv%clida\n" , 162 , 160);
+                printf("\n      Opci%cn inv%clida\n" , 162 , 160);
             }
 
         }
